@@ -16,3 +16,4 @@ ModStamp.imshow("image", image)
 
 #キーが押されるまで待機
 key = ModStamp.waitkey(10000)
+#エラー吐くので非推奨
