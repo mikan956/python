@@ -1,0 +1,47 @@
+パイソンのエラーは意味が分からない
+なんで強制的に改行しなきゃいけないんですかね...?
+そしてコードによっては無限ループする場合がある
+英語理解するのきっつ
+タスケテクダサイ.......
+1.バージョンや諸々の設定を確認するには以下のコマンドを実行します。
+ conda info
+
+2.Anaconda自体をアップデートするには以下のコマンドを実行します。
+ conda update -n base conda
+
+3.condaの公式リポジトリ（「defaults」チャンネル）以外の場所からパッケージをインストールしたい場合は「–channel」オブション、または「-c」使用します。例えば、conda-forge というチャンネルからbeautifulsoup4をインストールしたい場合は以下のようにします。
+
+conda install beautifulsoup4 --channel conda-forge
+
+#または以下のようにしてもOK
+conda install conda-forge::beautifulsoup4
+
+4.インストール済のパッケージの一覧を表示するには以下のようにconda listを実行
+
+5.conda install -c <チャネル名> <パッケージ名>	
+ダウンロード元のレポジトリを<チャネル名>に指定して、パッケージをインストールする
+
+6.conda list -n <環境名>	
+<環境名>にインストールされているパッケージの一覧を出力する
+
+7.対話モード起動	python
+対話モード終了	exit()
+仮想環境編
+目的	コマンド
+仮想環境の構築	conda create -n 名前 python=バージョン
+仮想環境の一覧の表示（現在地の確認）	conda info -e
+仮想環境への移動	activate 名前
+仮想環境無効化（rootへの移動）	conda deactivate
+仮想環境削除	conda remove -n 名前 --all
+仮想環境コピー	conda create -n 名前新 --clone 旧名前
+ライブラリ編
+目的	コマンド
+インストール（conda）	conda install ライブラリ名
+インストール（pip）	pip install ライブラリ名
+アンインストール	conda uninstall ライブラリ名
+インストール済みライブラリの一覧	conda list
+アップデート編
+目的	コマンド
+Anaconda本体のアップデート	conda update conda
+全ライブラリの一括アップデート	conda update --all
+特定のアップデート	conda update ライブラリ名
